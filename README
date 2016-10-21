@@ -1,0 +1,45 @@
+To test:
+Compile using 'make screen.x'.
+Run './screen.x [int] [int]' by entering two integers for the size.
+Enter 'make clean' to clean the directory.
+
+This build has the fully functioning game.
+
+
+Extra:
+The head of the snake has different symbol for each direction.
+
+The snake gets fatter as you increase your score.
+
+The vertical movement is calibrated to be close to the same speed
+as the horizontal movement.
+
+
+
+********************************************
+(Old Version)
+To test: 
+Compile using 'make test.x' for the test program.
+Run './test.x [int] [int]' by entering two integers after.
+Enter 'make clean' to clean the directory.
+
+In this test program builds will create the worm.  In the worm class the 
+grid is built and in the Grid class builds the FreePool which are linked 
+together. 
+As long as the second number entered is larger than 2 the worm(-1) will move 
+down the length of the grid with each movement printing a new grid and worm 
+representation.
+
+
+Issues:
+With certain integers such as './test.x 8 8' it will work, while other integers
+such as './test.x 10 10' will NOT work giving me this error:
+
+'*** Error in `./test.x': double free or corruption (out): 0x000000000181a420 ***'
+
+It seems to be that something isn't initialized correctly somewhere in the creation
+of the grid(grid.cpp)
+
+Some of the other integers such as './test.x 9 9' will work, but the corners are
+filled with random numbers rather than '-1'. 
+
